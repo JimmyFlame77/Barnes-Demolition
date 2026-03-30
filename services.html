@@ -1,0 +1,345 @@
+---
+layout: default
+title: "Demolition Services | Barnes Demolition – Wilmington, NC"
+description: "Barnes Demolition offers professional land clearing, structure demolition, mobile home removal, and lot grading services in Wilmington, NC and the Cape Fear region."
+extra_css: |
+
+  /* ============================================================
+     PAGE HERO / BANNER
+  ============================================================ */
+  .page-hero {
+    background: var(--charcoal);
+    border-bottom: 4px solid var(--gold);
+    padding: 64px 0 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      rgba(216,165,57,0.03) 0px, rgba(216,165,57,0.03) 1px,
+      transparent 1px, transparent 12px
+    );
+  }
+  .page-hero-inner { position: relative; z-index: 1; }
+  .page-hero .section-label { display: block; margin-bottom: 12px; }
+  .page-hero h1 {
+    font-family: var(--font-head);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; line-height: 1.08;
+    color: var(--white); margin-bottom: 16px;
+  }
+  .page-hero h1 .accent { color: var(--gold); }
+  .page-hero p {
+    font-size: 1.05rem; color: var(--cream-dk);
+    max-width: 600px; margin: 0 auto; line-height: 1.75;
+  }
+  .hero-stripe {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 5px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--gold) 0px, var(--gold) 28px,
+      var(--black) 28px, var(--black) 36px
+    );
+  }
+
+  /* ============================================================
+     INTRO STRIP
+  ============================================================ */
+  .services-intro {
+    background: var(--gold);
+    padding: 28px 0;
+    text-align: center;
+  }
+  .services-intro p {
+    font-family: var(--font-head);
+    font-size: 1.05rem; font-weight: 500;
+    letter-spacing: 1px; color: var(--charcoal);
+    max-width: 780px; margin: 0 auto;
+  }
+
+  /* ============================================================
+     SERVICE ROWS
+  ============================================================ */
+  .service-rows { background: var(--charcoal); padding: 0; }
+
+  .service-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+    border-bottom: 1px solid #2e2f28;
+  }
+  .service-row:last-child { border-bottom: none; }
+
+  /* Image cell */
+  .service-row-img {
+    position: relative;
+    overflow: hidden;
+    min-height: 380px;
+  }
+  .service-row-img img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .service-row:hover .service-row-img img {
+    transform: scale(1.03);
+  }
+  .service-row-img::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(34,35,29,0.25) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Text cell */
+  .service-row-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 56px 52px;
+    background: var(--charcoal-lt);
+  }
+  /* Alternate: image right, text left */
+  .service-row.reverse .service-row-img { order: 2; }
+  .service-row.reverse .service-row-text {
+    order: 1;
+    background: var(--charcoal);
+  }
+
+  .service-row-num {
+    font-family: var(--font-head);
+    font-size: 4rem; font-weight: 700;
+    color: rgba(216,165,57,0.12);
+    line-height: 1; margin-bottom: -10px;
+    letter-spacing: -2px;
+  }
+  .service-row-text .section-label { margin-bottom: 6px; }
+  .service-row-text h2 {
+    font-family: var(--font-head);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--white);
+    line-height: 1.15; margin-bottom: 6px;
+  }
+  .service-row-text h2 .highlight { color: var(--gold); }
+  .service-row-text .bar { margin: 14px 0 20px; }
+  .service-row-text p {
+    font-size: 0.95rem; color: #bbbcb0;
+    line-height: 1.8; margin-bottom: 14px;
+  }
+  .service-row-text p:last-of-type { margin-bottom: 28px; }
+
+  /* Equipment callout box */
+  .equip-box {
+    background: rgba(216,165,57,0.07);
+    border: 1px solid rgba(216,165,57,0.2);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    margin-bottom: 28px;
+  }
+  .equip-box h4 {
+    font-family: var(--font-head);
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 10px;
+  }
+  .equip-box ul {
+    list-style: none; display: flex; flex-direction: column; gap: 6px;
+  }
+  .equip-box ul li {
+    font-size: 0.875rem; color: #ccc; line-height: 1.5;
+  }
+  .equip-box ul li::before {
+    content: '▸ '; color: var(--gold);
+  }
+  .equip-box ul li strong { color: var(--white); }
+
+  .btn-request {
+    align-self: flex-start;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 30px;
+    font-family: var(--font-head); font-size: 0.95rem;
+    font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: var(--gold); color: var(--charcoal);
+    border: none; cursor: pointer; border-radius: var(--radius);
+    transition: var(--transition);
+  }
+  .btn-request:hover {
+    background: var(--gold-dk); color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(216,165,57,0.35);
+  }
+  .btn-request svg { width: 16px; height: 16px; }
+
+  /* ============================================================
+     CTA BAND
+  ============================================================ */
+  .cta-band {
+    background: var(--charcoal-lt);
+    border-top: 4px solid var(--gold);
+    padding: 72px 0;
+    text-align: center;
+  }
+  .cta-band h2 {
+    font-family: var(--font-head);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--white);
+    margin-bottom: 16px; line-height: 1.1;
+  }
+  .cta-band h2 .accent { color: var(--gold); }
+  .cta-band p {
+    font-size: 1rem; color: var(--olive-lt);
+    max-width: 520px; margin: 0 auto 32px;
+    line-height: 1.75;
+  }
+  .cta-actions {
+    display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: center; gap: 20px;
+  }
+  .cta-divider { width: 1px; height: 40px; background: #3a3b32; }
+  .cta-phone {
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .cta-phone .lbl {
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase; color: var(--olive-lt);
+  }
+  .cta-phone .num {
+    font-family: var(--font-head); font-size: 1.5rem;
+    font-weight: 600; color: var(--white);
+  }
+  .cta-phone .num:hover { color: var(--gold); }
+
+  /* ============================================================
+     RESPONSIVE
+  ============================================================ */
+  @media (max-width: 860px) {
+    .service-row {
+      grid-template-columns: 1fr;
+      min-height: unset;
+    }
+    .service-row-img { min-height: 280px; order: 0 !important; }
+    .service-row-text { order: 1 !important; padding: 40px 28px; }
+    .service-row.reverse .service-row-img { order: 0 !important; }
+    .service-row.reverse .service-row-text { order: 1 !important; background: var(--charcoal-lt); }
+    .btn-request { align-self: stretch; justify-content: center; }
+  }
+  @media (max-width: 480px) {
+    .service-row-text { padding: 32px 20px; }
+    .cta-divider { display: none; }
+    .cta-actions { flex-direction: column; }
+  }
+---
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <span class="section-label">What We Offer</span>
+    <h1>Professional <span class="accent">Demolition</span> Services</h1>
+    <p>Barnes Demolition is your trusted local partner for expert demolition and site services in Wilmington and the surrounding coastal communities. Quality results, on time, within budget.</p>
+  </div>
+  <div class="hero-stripe"></div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="services-intro">
+  <div class="container">
+    <p>Whether you need comprehensive site preparation, removal of unwanted structures, or precision lot grading — our experienced team delivers from start to finish.</p>
+  </div>
+</div>
+
+<!-- SERVICE ROWS -->
+<div class="service-rows">
+
+  <!-- ROW 1: Land Clearing — image left, text right -->
+  <div class="service-row">
+    <div class="service-row-img">
+      <img src="{{ '/img/barnes-02.png' | relative_url }}" alt="Land clearing and site preparation in Wilmington NC">
+    </div>
+    <div class="service-row-text">
+      <div class="service-row-num">01</div>
+      <span class="section-label">Site Prep</span>
+      <h2>Land Clearing &amp; <span class="highlight">Site Preparation</span></h2>
+      <span class="bar"></span>
+      <p>The first step to a successful construction or renovation project is a clean, well-prepared site. Our land clearing services tackle overgrown vegetation, stumps, and debris quickly and safely — creating a blank canvas for development or landscaping.</p>
+      <p>We utilize advanced machinery to ensure every acre is prepared to meet your specifications, saving you time and minimizing hassle. No job is too overgrown or too complex for our crew.</p>
+      <a href="tel:9108075640" class="btn-request">
+        Request Info
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1.23h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ROW 2: Structure Demolition — image right, text left -->
+  <div class="service-row reverse">
+    <div class="service-row-text">
+      <div class="service-row-num">02</div>
+      <span class="section-label">Structure Removal</span>
+      <h2>Mobile Home &amp; <span class="highlight">Structure Demolition</span></h2>
+      <span class="bar"></span>
+      <p>Whether you have an old mobile home, stick-built house, shed, barn, or garage that needs to be removed, Barnes Demolition handles your project with precision and care. We understand that demolition can be complex — requiring the right equipment and proper disposal solutions.</p>
+      <p>Our skilled crew works closely with property owners to ensure every project is completed thoroughly and in full compliance with local regulations. Residential or light commercial, we've got it covered.</p>
+      <a href="tel:9108075640" class="btn-request">
+        Request Info
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1.23h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+      </a>
+    </div>
+    <div class="service-row-img">
+      <img src="{{ '/img/barnes-03.png' | relative_url }}" alt="Mobile home and structure demolition Wilmington NC">
+    </div>
+  </div>
+
+  <!-- ROW 3: Lot Grading — image left, text right -->
+  <div class="service-row">
+    <div class="service-row-img">
+      <img src="{{ '/img/barnes-04.png' | relative_url }}" alt="Lot grading and site leveling in Wilmington NC">
+    </div>
+    <div class="service-row-text">
+      <div class="service-row-num">03</div>
+      <span class="section-label">Grading &amp; Leveling</span>
+      <h2>Lot Grading for a <span class="highlight">Solid Foundation</span></h2>
+      <span class="bar"></span>
+      <p>A properly graded lot is crucial for drainage, stability, and long-term property value. Our demolition services extend beyond tearing down structures — we expertly level and grade lots for new builds, landscaping, and site improvements.</p>
+      <p>Our team ensures consistent soil compaction and slope, preparing your land for the next phase of development. From raw acreage to post-demo cleanup, we leave every site development-ready.</p>
+      <div class="equip-box">
+        <h4>Our Equipment</h4>
+        <ul>
+          <li><strong>Bobcat 442 Excavator</strong> — ideal for land clearing, structure removal, and tight-access areas</li>
+          <li><strong>Bobcat T750 Skid Steer</strong> — versatile for grading, material handling, and site cleanup</li>
+        </ul>
+      </div>
+      <a href="tel:9108075640" class="btn-request">
+        Request Info
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1.23h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+      </a>
+    </div>
+  </div>
+
+</div><!-- /.service-rows -->
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Free Estimates. <span class="accent">Get Started Today.</span></h2>
+    <p>Barnes Demolition offers free, no-obligation estimates for all demolition and site services. Let us show you why Wilmington trusts us to clear the way for what's next.</p>
+    <div class="cta-actions">
+      <a href="{{ '/#contact' | relative_url }}" class="btn btn-primary">
+        Request a Free Estimate
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#22231D"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div class="cta-divider"></div>
+      <a href="tel:9108075640" class="cta-phone">
+        <span class="lbl">Call Us Direct</span>
+        <span class="num">(910) 807-5640</span>
+      </a>
+    </div>
+  </div>
+</section>

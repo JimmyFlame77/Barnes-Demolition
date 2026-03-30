@@ -1,0 +1,681 @@
+---
+layout: default
+title: "Barnes Demolition | Wilmington, NC"
+description: "Barnes Demolition – Wilmington's Heavy Hitters. Trusted demolition and site services contractor in Wilmington, NC. Call (901) 807-5640."
+extra_css: |
+  /* ============================================================
+     HERO
+  ============================================================ */
+  #hero {
+    position: relative; min-height: calc(100vh - 76px);
+    display: flex; align-items: center;
+    overflow: hidden; background: var(--black);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    opacity: 0.9;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(34,35,29,0.92) 0%,
+      rgba(34,35,29,0.68) 55%,
+      rgba(34,35,29,0.3) 100%
+    );
+  }
+  .hero-stripe {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--gold) 0px, var(--gold) 28px,
+      var(--black) 28px, var(--black) 36px
+    );
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 660px; padding: 80px 0;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--gold); color: var(--charcoal);
+    font-family: var(--font-body); font-size: 0.72rem;
+    font-weight: 700; letter-spacing: 3.5px;
+    text-transform: uppercase; padding: 6px 14px; margin-bottom: 20px;
+  }
+  .hero-title {
+    font-family: var(--font-head);
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; line-height: 1.05;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+    color: var(--white);
+  }
+  .hero-title .accent { color: var(--gold); }
+  .hero-sub {
+    font-size: 1.1rem; font-weight: 300;
+    color: var(--cream-dk); max-width: 520px;
+    margin-bottom: 36px; line-height: 1.7;
+  }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+  .hero-actions .divider { width: 1px; height: 40px; background: #555547; }
+  .hero-phone-cta { display: flex; flex-direction: column; }
+  .hero-phone-cta .label {
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase; color: var(--olive-lt);
+  }
+  .hero-phone-cta .number {
+    font-family: var(--font-head); font-size: 1.4rem;
+    font-weight: 600; color: var(--white);
+  }
+  .hero-phone-cta .number:hover { color: var(--gold); }
+  .hero-stats {
+    display: flex; flex-wrap: wrap;
+    margin-top: 60px;
+    background: rgba(34,35,29,0.88);
+    border: 1px solid #3a3b32;
+    border-left: 4px solid var(--gold);
+  }
+  .hero-stat {
+    flex: 1; min-width: 130px;
+    padding: 18px 24px;
+    border-right: 1px solid #3a3b32;
+  }
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat .num {
+    font-family: var(--font-head); font-size: 2.2rem;
+    font-weight: 700; color: var(--gold); line-height: 1;
+  }
+  .hero-stat .lbl {
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--olive-lt); margin-top: 4px;
+  }
+
+  /* ============================================================
+     SERVICES
+  ============================================================ */
+  #services {
+    background: var(--charcoal-lt); padding: 90px 0;
+    position: relative;
+  }
+  #services::before {
+    content: ''; display: block; position: absolute;
+    top: -1px; left: 0; right: 0; height: 50px;
+    background: var(--black);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+  }
+  .services-header { text-align: center; margin-bottom: 56px; }
+  .services-header .section-title { color: var(--white); }
+  .services-header p { color: var(--olive-lt); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: #2e2f28; border: 1px solid #3a3b32;
+    border-top: 4px solid var(--gold);
+    padding: 32px 28px;
+    transition: var(--transition); position: relative; overflow: hidden;
+  }
+  .service-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 3px; background: var(--gold);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover {
+    background: #363731; transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  }
+  .service-card:hover::after { transform: scaleX(1); }
+  .service-icon {
+    width: 52px; height: 52px; display: flex;
+    align-items: center; justify-content: center;
+    background: rgba(216,165,57,0.1);
+    border: 1.5px solid rgba(216,165,57,0.3);
+    margin-bottom: 18px;
+  }
+  .service-icon svg { width: 28px; height: 28px; fill: var(--gold); }
+  .service-card h3 {
+    font-family: var(--font-head); font-size: 1.25rem;
+    font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--white); margin-bottom: 10px;
+  }
+  .service-card p { font-size: 0.9rem; color: var(--olive-lt); line-height: 1.65; }
+
+  /* ============================================================
+     ABOUT
+  ============================================================ */
+  #about { background: var(--charcoal); padding: 100px 0; }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 64px; align-items: center;
+  }
+  .about-content .section-title { margin-bottom: 4px; color: var(--white); }
+  .about-content p {
+    font-size: 0.975rem; color: #bbbcb0;
+    line-height: 1.8; margin-bottom: 16px;
+  }
+  .about-content p strong { color: var(--white); }
+  .about-checklist {
+    list-style: none; margin: 20px 0 32px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .about-checklist li {
+    display: flex; align-items: flex-start;
+    gap: 12px; font-size: 0.9rem; color: #ccc;
+  }
+  .about-checklist li::before {
+    content: '▸'; color: var(--gold); font-size: 1rem;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .about-visual { position: relative; }
+  .about-visual-inner {
+    position: relative; background: #2e2f28;
+    border: 1px solid #3a3b32; overflow: hidden;
+  }
+  .about-visual-inner img {
+    width: 100%; height: 420px; object-fit: cover; display: block;
+  }
+  .bracket-tl, .bracket-br { position: absolute; width: 36px; height: 36px; }
+  .bracket-tl { top: -8px; left: -8px; border-top: 4px solid var(--gold); border-left: 4px solid var(--gold); }
+  .bracket-br { bottom: -8px; right: -8px; border-bottom: 4px solid var(--gold); border-right: 4px solid var(--gold); }
+  .about-badge {
+    position: absolute; bottom: 20px; left: 20px;
+    background: var(--gold); color: var(--charcoal); padding: 14px 20px; z-index: 2;
+  }
+  .about-badge .big {
+    font-family: var(--font-head); font-size: 2rem; font-weight: 700; line-height: 1;
+  }
+  .about-badge .small {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+  }
+
+  /* ============================================================
+     WHY CHOOSE US
+  ============================================================ */
+  #why { background: var(--cream); color: var(--charcoal); padding: 90px 0; }
+  #why .section-title { color: var(--charcoal); }
+  .why-header { text-align: center; margin-bottom: 56px; }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+  }
+  .why-card {
+    background: var(--white); border: 1px solid var(--cream-dk);
+    border-bottom: 4px solid var(--gold);
+    padding: 30px 26px; text-align: center;
+    transition: var(--transition);
+  }
+  .why-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(34,35,29,0.12); }
+  .why-icon {
+    width: 60px; height: 60px;
+    background: rgba(216,165,57,0.1); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px; border: 2px solid rgba(216,165,57,0.3);
+  }
+  .why-icon svg { width: 28px; height: 28px; fill: var(--gold); }
+  .why-card h3 {
+    font-family: var(--font-head); font-size: 1.1rem;
+    font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--charcoal); margin-bottom: 8px;
+  }
+  .why-card p { font-size: 0.875rem; color: var(--olive); line-height: 1.65; }
+
+  /* ============================================================
+     SERVICE AREA BANNER
+  ============================================================ */
+  #area { background: var(--gold); padding: 40px 0; text-align: center; }
+  .area-inner {
+    display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: center; gap: 24px;
+  }
+  .area-text h3 {
+    font-family: var(--font-head); font-size: 1.5rem;
+    font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--charcoal);
+  }
+  .area-text p { font-size: 0.875rem; color: rgba(34,35,29,0.75); margin-top: 4px; }
+  .area-locations { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .location-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(34,35,29,0.18); border: 1px solid rgba(34,35,29,0.35);
+    color: var(--charcoal); font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px;
+  }
+
+  /* ============================================================
+     CONTACT
+  ============================================================ */
+  #contact { background: var(--charcoal-lt); padding: 100px 0; position: relative; }
+  #contact::before {
+    content: ''; position: absolute;
+    top: -1px; left: 0; right: 0; height: 50px;
+    background: var(--gold);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+  }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.6fr;
+    gap: 64px; align-items: start;
+  }
+  .contact-info h2 {
+    font-family: var(--font-head);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; line-height: 1.1;
+    margin-bottom: 4px; color: var(--white);
+  }
+  .contact-info .highlight { color: var(--gold); }
+  .contact-info p { font-size: 0.9rem; color: var(--olive-lt); line-height: 1.7; margin-top: 16px; margin-bottom: 32px; }
+  .contact-detail { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+  .contact-detail-icon {
+    width: 42px; height: 42px; flex-shrink: 0;
+    background: rgba(216,165,57,0.1); border: 1.5px solid rgba(216,165,57,0.3);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .contact-detail-icon svg { width: 18px; height: 18px; fill: var(--gold); }
+  .contact-detail-text .label {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--olive-lt);
+  }
+  .contact-detail-text .value {
+    font-family: var(--font-head); font-size: 1.05rem; font-weight: 500;
+    color: var(--white); margin-top: 2px;
+  }
+  .contact-detail-text .value a:hover { color: var(--gold); }
+  .contact-form-wrap {
+    background: #2e2f28; border: 1px solid #3a3b32;
+    border-top: 4px solid var(--gold); padding: 40px 36px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .form-group { margin-bottom: 22px; }
+  .form-group label {
+    display: block; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase; color: var(--olive-lt); margin-bottom: 7px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; background: var(--charcoal); border: 1px solid #3a3b32;
+    border-radius: var(--radius); color: var(--white);
+    font-family: var(--font-body); font-size: 0.95rem;
+    padding: 12px 16px;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    outline: none; appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold); box-shadow: 0 0 0 3px rgba(216,165,57,0.18);
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: #555547; }
+  .form-group select option { background: var(--charcoal); color: var(--white); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-submit {
+    display: flex; align-items: center;
+    justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: 4px;
+  }
+  .form-note { font-size: 0.78rem; color: var(--olive); }
+  .btn-submit { font-size: 1rem; padding: 14px 36px; }
+
+  /* ============================================================
+     RESPONSIVE — INDEX PAGE
+  ============================================================ */
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-visual { order: -1; }
+    .about-visual-inner img { height: 280px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 660px) {
+    .hero-stats { flex-direction: column; }
+    .hero-stat { border-right: none; border-bottom: 1px solid #3a3b32; }
+    .hero-stat:last-child { border-bottom: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form-wrap { padding: 28px 20px; }
+  }
+  @media (max-width: 420px) {
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .hero-actions .divider { display: none; }
+  }
+
+extra_js: |
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const required = form.querySelectorAll('[required]');
+    let valid = true;
+    required.forEach(field => {
+      if (!field.value.trim()) { field.style.borderColor = '#c0392b'; valid = false; }
+      else { field.style.borderColor = ''; }
+    });
+    if (valid) {
+      const btn = form.querySelector('.btn-submit');
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = '#4a7a2a';
+      btn.style.color = '#fff';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = 'Send Request <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#22231D"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+        form.reset();
+      }, 4000);
+    }
+  });
+---
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero">
+  <img class="hero-bg"
+    src="{{ '/img/hero-demolition.jpg' | relative_url }}"
+    alt="Barnes Demolition – demolition site at dusk in Wilmington NC">
+  <div class="hero-overlay"></div>
+  <div class="hero-stripe"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="#22231D"/></svg>
+        Wilmington, NC &nbsp;|&nbsp; Licensed &amp; Insured
+      </div>
+      <h1 class="hero-title">
+        Tear It Down.<br><span class="accent">Do It Right.</span>
+      </h1>
+      <p class="hero-sub">
+        Barnes Demolition is Wilmington's trusted contractor for residential, commercial, and industrial demolition. We deliver clean, safe, and on-schedule results — every time.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">
+          Get a Free Quote
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#22231D"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <div class="divider"></div>
+        <a href="tel:9018075640" class="hero-phone-cta">
+          <span class="label">Call Now</span>
+          <span class="number">(901) 807-5640</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">500+</div><div class="lbl">Projects Completed</div></div>
+        <div class="hero-stat"><div class="num">15+</div><div class="lbl">Years Experience</div></div>
+        <div class="hero-stat"><div class="num">100%</div><div class="lbl">Licensed &amp; Insured</div></div>
+        <div class="hero-stat"><div class="num">24hr</div><div class="lbl">Emergency Response</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES
+============================================================ -->
+<section id="services">
+  <div class="container">
+    <div class="services-header">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Our <span class="highlight">Demolition</span> Services</h2>
+      <span class="bar center"></span>
+      <p style="max-width:560px;margin:0 auto;font-size:0.95rem;line-height:1.7;">
+        From single-family teardowns to full commercial and industrial demolition, Barnes Demolition brings precision, safety, and power to every project in the Wilmington area.
+      </p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Residential Demolition</h3>
+        <p>Full and partial teardowns of homes, garages, outbuildings, and accessory structures. We handle debris removal and site cleanup — leaving your lot ready to build.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+        <h3>Commercial Demolition</h3>
+        <p>Retail buildings, warehouses, office complexes, and mixed-use structures. Our team manages permitting, utilities coordination, and full site preparation for your next build.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>Interior Demolition</h3>
+        <p>Selective gut-outs, wall removal, floor stripping, and renovation teardowns — without touching your structure's shell. Perfect for remodels and tenant improvements.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        <h3>Industrial Demolition</h3>
+        <p>Heavy-duty dismantlement of industrial facilities, plants, silos, and large-scale structures. We utilize specialized equipment and strict safety protocols for complex projects.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3>Concrete &amp; Foundation Removal</h3>
+        <p>Breaking and removal of concrete slabs, driveways, foundations, and retaining walls using hydraulic breakers and excavators. We haul it away — you get a clean slate.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg></div>
+        <h3>Site Clearing &amp; Grading</h3>
+        <p>Land clearing, tree and stump removal, soil grading, and debris hauling to prepare raw or post-demolition sites for construction. We leave your property development-ready.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-content">
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-title">Wilmington's <span class="highlight">Heavy Hitters</span></h2>
+        <span class="bar"></span>
+        <p>Barnes Demolition has been the go-to demolition contractor across Wilmington and the greater Cape Fear region for over a decade and a half. We combine raw capability with precision planning to take on jobs of any size — from single-structure teardowns to complex multi-phase commercial projects.</p>
+        <p>Our crew is <strong>fully licensed, bonded, and insured</strong> in North Carolina. We coordinate directly with local permitting authorities, utility providers, and environmental agencies so you don't have to. We do it right the first time, on time, and on budget.</p>
+        <ul class="about-checklist">
+          <li>NC Licensed Demolition Contractor</li>
+          <li>Fully bonded and liability insured</li>
+          <li>All permits and utility coordination handled</li>
+          <li>Environmentally responsible debris disposal</li>
+          <li>Serving Wilmington, Leland, Hampstead, Jacksonville &amp; surrounding areas</li>
+          <li>Free on-site estimates — no obligation</li>
+        </ul>
+        <a href="#contact" class="btn btn-gold-outline">Request a Free Estimate</a>
+      </div>
+
+      <div class="about-visual">
+        <div class="bracket-tl"></div>
+        <div class="bracket-br"></div>
+        <div class="about-visual-inner">
+          <img src="{{ '/img/barnes-01.png' | relative_url }}" alt="House and yard demolition cleanup in Wilmington NC">
+          <div class="about-badge">
+            <div class="big">15+</div>
+            <div class="small">Years in<br>Demolition</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY CHOOSE US
+============================================================ -->
+<section id="why">
+  <div class="container">
+    <div class="why-header">
+      <span class="section-label">The Barnes Difference</span>
+      <h2 class="section-title">Why Choose <span class="highlight">Barnes?</span></h2>
+      <span class="bar center"></span>
+    </div>
+    <div class="why-grid">
+
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Safety First</h3>
+        <p>Every project follows strict OSHA protocols. Our crews are trained, certified, and equipped to eliminate risk for your property and neighbors.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>On-Time Delivery</h3>
+        <p>We respect your schedule. Our project managers provide clear timelines and regular updates — no surprise delays, no excuses.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Transparent Pricing</h3>
+        <p>Detailed written estimates before we lift a finger. No hidden fees, no scope creep. You know exactly what you're getting for your investment.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Full-Service Approach</h3>
+        <p>From permits to final cleanup, we manage every phase so you can focus on what comes next. We coordinate with GCs, engineers, and inspectors directly.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Locally Rooted</h3>
+        <p>We live and work in Wilmington. We know the local codes, the terrain, and the community — and we're invested in doing right by it.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h3>Eco-Responsible</h3>
+        <p>We sort, recycle, and responsibly dispose of demolition materials — diverting waste from landfills and staying compliant with NC environmental regulations.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICE AREA BANNER
+============================================================ -->
+<section id="area">
+  <div class="container">
+    <div class="area-inner">
+      <div class="area-text">
+        <h3>&#128205; Our Service Area</h3>
+        <p>Proudly serving Wilmington and the Cape Fear region</p>
+      </div>
+      <div class="area-locations">
+        <span class="location-tag">Wilmington, NC</span>
+        <span class="location-tag">Rocky Point, NC</span>
+        <span class="location-tag">Holly Ridge, NC</span>
+        <span class="location-tag">Leland, NC</span>
+        <span class="location-tag">Currie, NC</span>
+        <span class="location-tag">Hampstead, NC</span>
+        <span class="location-tag">Surrounding Areas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <span class="section-label">Get In Touch</span>
+        <h2>Ready to <span class="highlight">Get Started?</span></h2>
+        <span class="bar"></span>
+        <p>Fill out the form and our team will reach out within one business day with a free, no-obligation estimate. Prefer to talk? We answer the phone.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1.23h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg></div>
+          <div class="contact-detail-text">
+            <div class="label">Phone</div>
+            <div class="value"><a href="tel:9018075640">(901) 807-5640</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="contact-detail-text">
+            <div class="label">Email</div>
+            <div class="value"><a href="mailto:info@barnesdemolition.com">info@barnesdemolition.com</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="contact-detail-text">
+            <div class="label">Location</div>
+            <div class="value">Wilmington, NC 28401</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="fname" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="lname" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(910) 555-0000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Type of Service *</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>— Select a service —</option>
+              <option value="residential">Residential Demolition</option>
+              <option value="commercial">Commercial Demolition</option>
+              <option value="interior">Interior / Selective Demolition</option>
+              <option value="industrial">Industrial Demolition</option>
+              <option value="concrete">Concrete &amp; Foundation Removal</option>
+              <option value="clearing">Site Clearing &amp; Grading</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="address">Project Address</label>
+            <input type="text" id="address" name="address" placeholder="123 Main St, Wilmington, NC">
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project — scope, timeline, any special considerations..." required></textarea>
+          </div>
+          <div class="form-submit">
+            <p class="form-note">We respond within 1 business day.<br>All estimates are 100% free &amp; no-obligation.</p>
+            <button type="submit" class="btn btn-primary btn-submit">
+              Send Request
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#22231D"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
