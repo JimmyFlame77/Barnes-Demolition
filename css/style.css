@@ -99,7 +99,7 @@ a { text-decoration: none; color: inherit; }
 .header-inner {
   display: flex; align-items: center;
   justify-content: space-between;
-  height: 76px; gap: 16px;
+  height: 84px; gap: 16px;
 }
 .header-logo-wrap { display: flex; align-items: center; gap: 10px; }
 .header-logo-text .name {
@@ -282,6 +282,8 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   .header-nav { display: none; }
   .hamburger { display: flex; }
+  .header-inner { height: 64px; padding: 8px 0; }
+  .header-cta { display: none; }
 }
 @media (min-width: 901px) {
   .mobile-nav { display: none !important; }
