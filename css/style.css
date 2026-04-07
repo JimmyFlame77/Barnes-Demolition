@@ -892,7 +892,7 @@ a { text-decoration: none; color: inherit; }
 }
 .blog-hero-inner { position: relative; z-index: 1; text-align: center; }
 .blog-hero-inner .section-label { display: block; margin-bottom: 12px; }
-.blog-hero-inner .section-title { margin-bottom: 4px; }
+.blog-hero-inner .section-title { margin-bottom: 4px; color: var(--white); }
 .blog-hero p {
   font-size: 1.05rem; color: var(--cream-dk);
   max-width: 600px; margin: 0 auto; line-height: 1.75;
