@@ -10,14 +10,14 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page.og_title | default: page.title }}">
   <meta property="og:description" content="{{ page.og_description | default: page.description }}">
-  <meta property="og:image" content="{{ page.og_image | default: '/img/og-image.jpg' | relative_url }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/img/og-image.webp' | relative_url }}">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page.twitter_title | default: page.title }}">
   <meta name="twitter:description" content="{{ page.twitter_description | default: page.description }}">
-  <meta name="twitter:image" content="{{ page.twitter_image | default: page.og_image | default: '/img/og-image.jpg' | relative_url }}">
+  <meta name="twitter:image" content="{{ page.twitter_image | default: page.og_image | default: '/img/og-image.webp' | relative_url }}">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="{{ '/img/favicon.png' | relative_url }}">

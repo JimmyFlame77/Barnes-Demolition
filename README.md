@@ -152,7 +152,7 @@ Items to complete as the project progresses. Delete each item once done.
 
 ### Content & Media
 - [x] ~~Convert images to WebP for performance~~ — Done
-- [ ] Add OG share image (`img/og-image.jpg`, 1200x630)
+- [x] ~~Add OG share image~~ — Done (`img/og-image.webp`, 1200x630, 144KB)
 - [ ] Build out service area location pages
 
 ### Optimization
