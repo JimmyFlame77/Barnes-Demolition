@@ -282,7 +282,7 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   .header-nav { display: none; }
   .hamburger { display: flex; }
-  .header-inner { height: 64px; padding: 8px 0; }
+  .header-inner { height: 64px; padding: 12px 0; }
   .header-cta { display: none; }
 }
 @media (min-width: 901px) {
@@ -890,7 +890,9 @@ a { text-decoration: none; color: inherit; }
     transparent 1px, transparent 12px
   );
 }
-.blog-hero-inner { position: relative; z-index: 1; }
+.blog-hero-inner { position: relative; z-index: 1; text-align: center; }
+.blog-hero-inner .section-label { display: block; margin-bottom: 12px; }
+.blog-hero-inner .section-title { margin-bottom: 4px; }
 .blog-hero p {
   font-size: 1.05rem; color: var(--cream-dk);
   max-width: 600px; margin: 0 auto; line-height: 1.75;
