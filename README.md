@@ -151,10 +151,10 @@ Items to complete as the project progresses. Delete each item once done.
 - [ ] Add blog link to navigation
 
 ### Content & Media
-- [ ] Convert images to WebP for performance
+- [x] ~~Convert images to WebP for performance~~ — Done
 - [ ] Add OG share image (`img/og-image.jpg`, 1200x630)
 - [ ] Build out service area location pages
 
 ### Optimization
+- [x] ~~Convert images to WebP~~ — Done. 12.5MB → 1MB (92% reduction)
 - [ ] Run Core Web Vitals audit
-- [ ] Compress hero image (currently 1.5MB+ PNG)
