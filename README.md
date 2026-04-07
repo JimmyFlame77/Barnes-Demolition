@@ -157,4 +157,5 @@ Items to complete as the project progresses. Delete each item once done.
 
 ### Optimization
 - [x] ~~Convert images to WebP~~ — Done. 12.5MB → 1MB (92% reduction)
+- [x] ~~Compress images for speed~~ — Done. Logo 194KB→8KB, hero resized, service photos recompressed. Total 1MB→815KB
 - [ ] Run Core Web Vitals audit
