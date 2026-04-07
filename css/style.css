@@ -282,8 +282,9 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   .header-nav { display: none; }
   .hamburger { display: flex; }
-  .header-inner { height: 64px; padding: 12px 0; }
+  .header-inner { height: auto; padding: 14px 0; }
   .header-cta { display: none; }
+  .header-logo-wrap img { height: 48px !important; width: 48px !important; }
 }
 @media (min-width: 901px) {
   .mobile-nav { display: none !important; }
