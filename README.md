@@ -139,6 +139,10 @@ git push origin main
 
 The post appears on the blog index automatically with prev/next links to adjacent posts.
 
+### Note on blog URLs
+
+Blog post URLs include the category in the path — e.g., `/guides/preparing-your-property-for-residential-demolition.html`. If you rename a post's `category` in front matter, its URL will change. Keep categories consistent to avoid broken links.
+
 ---
 
 ## Local Development
