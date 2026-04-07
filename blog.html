@@ -1,0 +1,123 @@
+---
+layout: default
+title: "Blog | Barnes Demolition – Wilmington, NC"
+description: "Demolition tips, project guides, and industry insights for homeowners and contractors in the Wilmington, NC area. From the Barnes Demolition team."
+canonical: "{{ 'blog.html' | relative_url }}"
+og_title: "Blog | Barnes Demolition – Wilmington, NC"
+og_description: "Demolition tips, project guides, and industry insights from Barnes Demolition."
+---
+
+<!-- ===== BLOG HERO ===== -->
+<section class="blog-hero">
+  <div class="container">
+    <div class="blog-hero-inner">
+      <span class="section-label">Barnes Demolition Blog</span>
+      <h1 class="section-title">Insights, Guides &amp; <span class="highlight">Industry Know-How</span></h1>
+      <span class="bar center"></span>
+      <p>Demolition advice, project planning tips, and compliance insights for homeowners and contractors across the Cape Fear region.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FILTER BAR ===== -->
+<div class="blog-filter-bar">
+  <div class="container">
+    <div class="blog-filter-inner">
+      <p class="blog-filter-count" id="filter-count">Showing <span>{{ site.posts | size }}</span> post{% if site.posts.size != 1 %}s{% endif %}</p>
+      <input type="text" id="search-input" class="blog-search" placeholder="Search posts…" aria-label="Search posts">
+    </div>
+  </div>
+</div>
+
+<!-- ===== POSTS GRID ===== -->
+<section class="blog-posts-section">
+  <div class="container">
+    <div class="blog-posts-grid" id="posts-grid">
+
+      {% for post in site.posts %}
+      <article class="blog-post-card" data-title="{{ post.title | downcase | escape }}" data-excerpt="{{ post.excerpt | strip_html | downcase | escape }}">
+        <a href="{{ post.url | relative_url }}" class="blog-card-img-link" aria-label="Read: {{ post.title | escape }}">
+          <div class="blog-card-img-wrap">
+            <img class="blog-card-img" src="{{ post.image | default: '/img/barnes-01.webp' | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
+          </div>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            {% if post.category %}<span class="blog-card-cat">{{ post.category }}</span>{% endif %}
+            <span class="blog-card-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          </div>
+          <a href="{{ post.url | relative_url }}">
+            <h2 class="blog-card-title">{{ post.title }}</h2>
+          </a>
+          <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-author">{{ post.author | default: "Barnes Demolition" }}</span>
+            <a href="{{ post.url | relative_url }}" class="blog-card-read-more">Read More ▸</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+
+    </div>
+
+    {% if site.posts.size == 0 %}
+    <div class="blog-empty">
+      <h3>No posts yet</h3>
+      <p>Check back soon for demolition tips, project guides, and industry insights.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to <span class="accent">Get Started?</span></h2>
+    <p>Barnes Demolition offers free, no-obligation estimates for all demolition and site services across the Wilmington area.</p>
+    <div class="cta-actions">
+      <a href="{{ '/#contact' | relative_url }}" class="btn btn-primary">
+        Request a Free Estimate
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#22231D"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div class="cta-divider"></div>
+      <a href="{{ site.data.site.phone_link }}" class="cta-phone">
+        <span class="lbl">Call Us Direct</span>
+        <span class="num">{{ site.data.site.phone }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENT-SIDE SEARCH ===== -->
+<script>
+  (function() {
+    var searchInput = document.getElementById('search-input');
+    var grid = document.getElementById('posts-grid');
+    var filterCount = document.getElementById('filter-count');
+    var cards = grid.querySelectorAll('.blog-post-card');
+    var total = cards.length;
+    var timer;
+
+    searchInput.addEventListener('input', function() {
+      clearTimeout(timer);
+      timer = setTimeout(function() {
+        var query = searchInput.value.trim().toLowerCase();
+        var visible = 0;
+
+        cards.forEach(function(card) {
+          var title = card.getAttribute('data-title') || '';
+          var excerpt = card.getAttribute('data-excerpt') || '';
+          var match = !query || title.indexOf(query) !== -1 || excerpt.indexOf(query) !== -1;
+          card.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+
+        if (query) {
+          filterCount.innerHTML = '<span>' + visible + '</span> result' + (visible !== 1 ? 's' : '') + ' for "<em>' + query + '</em>"';
+        } else {
+          filterCount.innerHTML = 'Showing <span>' + total + '</span> post' + (total !== 1 ? 's' : '');
+        }
+      }, 280);
+    });
+  })();
+</script>

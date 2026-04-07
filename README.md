@@ -20,13 +20,16 @@ Barnes-Demolition/
 │   ├── head.html                  # <head> — meta, OG, Twitter, favicon, CSS, schema
 │   ├── header.html                # Sticky nav, logo, hamburger, mobile menu
 │   └── footer.html                # Footer with links, copyright
+├── _posts/                        # Blog articles (Markdown)
 ├── _layouts/
-│   └── default.html               # Base layout (head, header, content, footer, JS)
+│   ├── default.html               # Base layout (head, header, content, footer, JS)
+│   └── post.html                  # Blog article layout
 ├── css/style.css                  # Global stylesheet (single file)
 ├── js/main.js                     # Shared JS (hamburger, scroll, fade-in, form)
 ├── img/                           # All images (logo, hero, service photos, favicon)
 ├── index.html                     # Homepage
 ├── services.html                  # Services detail page
+├── blog.html                      # Blog index (renders post cards)
 ├── robots.txt                     # Crawl directives + sitemap reference
 ├── Gemfile                        # GitHub Pages gem dependencies
 └── .gitignore                     # Build artifacts excluded
@@ -76,6 +79,68 @@ Edit **`js/main.js`**. Contains hamburger menu, smooth scroll, fade-in animation
 
 ---
 
+## How to Write a Blog Post
+
+### Create the file
+
+Add a new Markdown file to `_posts/` using Jekyll's naming convention:
+
+```
+_posts/YYYY-MM-DD-your-post-slug.md
+```
+
+Example: `_posts/2026-05-01-when-to-hire-a-demolition-contractor.md`
+
+### Front matter template
+
+```yaml
+---
+layout: post
+title: "Your Post Title Here"
+date: 2026-05-01
+category: "Guides"
+author: "Barnes Demolition"
+image: "/img/your-image.webp"
+excerpt: "Short summary for the blog card (1-2 sentences)."
+description: "SEO meta description (under 160 characters)."
+---
+```
+
+| Field | Required | Notes |
+|-------|----------|-------|
+| `layout` | Yes | Always `post` |
+| `title` | Yes | The article headline |
+| `date` | Yes | Must match the filename date (YYYY-MM-DD) |
+| `category` | No | Badge on the card (e.g., "Tips", "Guides", "Compliance") |
+| `author` | No | Defaults to "Barnes Demolition" if omitted |
+| `image` | No | Path to hero/card image. Defaults to barnes-01.webp if omitted |
+| `excerpt` | No | Card summary. Auto-generated from first paragraph if omitted |
+| `description` | No | SEO meta description |
+
+### Write the content
+
+After the closing `---`, write your article in Markdown. Use `##` for section headings.
+
+The article layout renders: cinematic hero image, title with gold accent bar, meta info, content, prev/next navigation, CTA band, and back-to-blog link.
+
+### Add a post image
+
+1. Save your image to `img/` (e.g., `blog-new-topic.webp`)
+2. Reference it in front matter: `image: "/img/blog-new-topic.webp"`
+3. Images display as a cinematic banner (21:9 desktop, 16:9 mobile) via `object-fit: cover`
+
+### Publish
+
+```bash
+git add _posts/2026-05-01-when-to-hire-a-demolition-contractor.md
+git commit -m "New blog post: When to hire a demolition contractor"
+git push origin main
+```
+
+The post appears on the blog index automatically with prev/next links to adjacent posts.
+
+---
+
 ## Local Development
 
 ```bash
@@ -111,6 +176,9 @@ When migrating to a custom domain:
 | Shared JS                       | `js/main.js`                            |
 | Homepage content                | `index.html`                            |
 | Services page content           | `services.html`                         |
+| Blog index                      | `blog.html`                             |
+| Blog posts                      | `_posts/YYYY-MM-DD-slug.md`             |
+| Blog post layout                | `_layouts/post.html`                    |
 | SEO meta (sitewide)             | `_includes/head.html`, `_config.yml`    |
 | SEO meta (per page)             | Front matter of each `.html` file       |
 | Schema / structured data        | `_includes/head.html`                   |
@@ -146,9 +214,10 @@ Items to complete as the project progresses. Delete each item once done.
 - [ ] Currently shows "Message Sent" but doesn't actually send anywhere
 
 ### Blog
-- [ ] Add `_posts/` directory and `_layouts/post.html`
-- [ ] Update `blog.html` index page (same pattern as Quick Haulers)
-- [ ] Add blog link to navigation
+- [x] ~~Add `_posts/` directory and `_layouts/post.html`~~ — Done
+- [x] ~~Create `blog.html` index page with card grid and search~~ — Done
+- [x] ~~Add blog link to navigation~~ — Done
+- [x] ~~Write 3 starter articles with real content~~ — Done
 
 ### Content & Media
 - [x] ~~Convert images to WebP for performance~~ — Done

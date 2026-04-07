@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<!-- ===== ARTICLE HERO IMAGE ===== -->
+<section class="article-hero">
+  <div class="article-hero-img-wrap">
+    <img
+      class="article-hero-img"
+      src="{{ page.image | default: '/img/barnes-01.webp' | relative_url }}"
+      alt="{{ page.title | escape }}"
+    >
+    <div class="article-hero-overlay"></div>
+  </div>
+</section>
+
+<!-- ===== ARTICLE BODY ===== -->
+<article class="article-body">
+  <div class="container article-container">
+
+    <!-- Meta -->
+    <div class="article-meta">
+      {% if page.category %}<span class="article-cat">{{ page.category }}</span>{% endif %}
+      <span class="article-date">{{ page.date | date: "%b %-d, %Y" }}</span>
+      {% if page.author %}<span class="article-author">{{ page.author }}</span>{% endif %}
+    </div>
+
+    <!-- Title -->
+    <h1 class="article-title">{{ page.title }}</h1>
+    <span class="bar"></span>
+
+    <!-- Content -->
+    <div class="article-content">
+      {{ content }}
+    </div>
+
+    <!-- Prev / Next -->
+    <nav class="article-nav">
+      {% if page.previous %}
+        <a href="{{ page.previous.url | relative_url }}" class="article-nav-link article-nav-prev">
+          <span class="article-nav-label">&larr; Previous</span>
+          <span class="article-nav-title">{{ page.previous.title }}</span>
+        </a>
+      {% else %}
+        <span class="article-nav-link article-nav-placeholder"></span>
+      {% endif %}
+
+      {% if page.next %}
+        <a href="{{ page.next.url | relative_url }}" class="article-nav-link article-nav-next">
+          <span class="article-nav-label">Next &rarr;</span>
+          <span class="article-nav-title">{{ page.next.title }}</span>
+        </a>
+      {% else %}
+        <span class="article-nav-link article-nav-placeholder"></span>
+      {% endif %}
+    </nav>
+
+    <!-- Back to Blog -->
+    <div class="article-back">
+      <a href="{{ '/blog.html' | relative_url }}" class="btn btn-gold-outline">&larr; Back to Blog</a>
+    </div>
+
+  </div>
+</article>
+
+<!-- ===== CTA BAND ===== -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to <span class="accent">Get Started?</span></h2>
+    <p>Barnes Demolition offers free, no-obligation estimates for all demolition and site services across the Wilmington area.</p>
+    <div class="cta-actions">
+      <a href="{{ '/#contact' | relative_url }}" class="btn btn-primary">
+        Request a Free Estimate
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#22231D"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div class="cta-divider"></div>
+      <a href="{{ site.data.site.phone_link }}" class="cta-phone">
+        <span class="lbl">Call Us Direct</span>
+        <span class="num">{{ site.data.site.phone }}</span>
+      </a>
+    </div>
+  </div>
+</section>
