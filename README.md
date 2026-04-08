@@ -232,3 +232,19 @@ Items to complete as the project progresses. Delete each item once done.
 - [x] ~~Convert images to WebP~~ — Done. 12.5MB → 1MB (92% reduction)
 - [x] ~~Compress images for speed~~ — Done. Logo 194KB→8KB, hero resized, service photos recompressed. Total 1MB→815KB
 - [ ] Run Core Web Vitals audit
+
+---
+
+### Blog Dashboard Integration
+The `_blog-config.json` file in the repo root enables this site in the [Proxy Blog Dashboard](https://jimmyflame77.github.io/Proxy-Blog-Dashboard/). The dashboard auto-discovers any repo containing this file and adds it to the site selector. If you build a new Jekyll site and want it to appear in the dashboard, add a `_blog-config.json` to the repo root:
+
+```json
+{
+  "postsPath": "_posts",
+  "imagesPath": "images",
+  "defaultAuthor": "Your Site Name",
+  "categories": ["Tips", "Guides", "News"]
+}
+```
+
+Adjust `imagesPath` to match your site's image directory and `categories` to match your content categories.
