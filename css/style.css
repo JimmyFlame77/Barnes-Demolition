@@ -1182,3 +1182,45 @@ a { text-decoration: none; color: inherit; }
   .article-nav { flex-direction: column; gap: 1rem; }
   .article-nav-next { text-align: left; }
 }
+
+/* ============================================================
+   THANK YOU PAGE
+============================================================ */
+.thankyou-section {
+  padding: 80px 0 80px;
+  background: var(--cream);
+}
+.thankyou-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+.thankyou-header h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--almost-black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.thankyou-header h1 .highlight { color: var(--gold); }
+.thankyou-header p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--charcoal);
+}
+.thankyou-articles-label {
+  text-align: center;
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--almost-black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 28px;
+}
+.thankyou-back {
+  text-align: center;
+  margin-top: 52px;
+}

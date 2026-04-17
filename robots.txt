@@ -3,5 +3,7 @@ layout: null
 ---
 User-agent: *
 Allow: /
+Disallow: /thank-you.html
+Disallow: /thank-you/
 
 Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml

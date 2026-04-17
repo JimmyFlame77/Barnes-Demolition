@@ -1,0 +1,55 @@
+---
+layout: default
+title: "Thank You | Barnes Demolition"
+description: "Thank you for contacting Barnes Demolition. We'll be in touch shortly."
+robots: "noindex, nofollow"
+---
+
+<!-- ============================================================
+     THANK YOU
+============================================================ -->
+<section class="thankyou-section">
+  <div class="container">
+
+    <div class="thankyou-header">
+      <h1>Thank <span class="highlight">You!</span></h1>
+      <p>We've received your request and a member of our team will be in touch within one business day with your free estimate. In the meantime, check out our helpful articles below!</p>
+    </div>
+
+    <p class="thankyou-articles-label">Helpful Articles</p>
+
+    <div class="blog-posts-grid">
+      {% for post in site.posts limit:3 %}
+      <article class="blog-post-card">
+        <a href="{{ post.url | relative_url }}" class="blog-card-img-link" aria-label="Read: {{ post.title | escape }}">
+          <div class="blog-card-img-wrap">
+            <img class="blog-card-img" src="{{ post.image | default: '/img/barnes-01.webp' | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
+          </div>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            {% if post.category %}<span class="blog-card-cat">{{ post.category }}</span>{% endif %}
+            <span class="blog-card-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          </div>
+          <a href="{{ post.url | relative_url }}">
+            <h2 class="blog-card-title">{{ post.title }}</h2>
+          </a>
+          <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-author">{{ post.author | default: "Barnes Demolition" }}</span>
+            <a href="{{ post.url | relative_url }}" class="blog-card-read-more">Read More &#9658;</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="thankyou-back">
+      <a href="{{ '/' | relative_url }}" class="btn btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#22231D"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Home
+      </a>
+    </div>
+
+  </div>
+</section>

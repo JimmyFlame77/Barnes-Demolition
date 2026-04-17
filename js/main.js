@@ -62,7 +62,7 @@
     });
   }
 
-  // Contact form validation (only on pages with the form)
+  // Contact form — Web3Forms submission with 1-second Transmitting animation
   var form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function(e) {
@@ -73,20 +73,21 @@
         if (!field.value.trim()) { field.style.borderColor = '#c0392b'; valid = false; }
         else { field.style.borderColor = ''; }
       });
-      if (valid) {
-        var btn = form.querySelector('.btn-submit');
-        btn.textContent = '✓ Message Sent!';
-        btn.style.background = '#4a7a2a';
-        btn.style.color = '#fff';
-        btn.disabled = true;
-        setTimeout(function() {
-          btn.innerHTML = 'Send Request <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#22231D"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
-          btn.style.background = '';
-          btn.style.color = '';
-          btn.disabled = false;
-          form.reset();
-        }, 4000);
+      if (!valid) return;
+
+      // Inject spinner keyframe once
+      if (!document.getElementById('bd-transmit-style')) {
+        var style = document.createElement('style');
+        style.id = 'bd-transmit-style';
+        style.textContent = '@keyframes bd-spin{to{transform:rotate(360deg)}}.bd-spinner{display:inline-block;width:13px;height:13px;border:2px solid rgba(34,35,29,0.2);border-top-color:#22231D;border-radius:50%;animation:bd-spin .65s linear infinite;vertical-align:middle;margin-right:8px}';
+        document.head.appendChild(style);
       }
+
+      var btn = form.querySelector('.btn-submit');
+      btn.innerHTML = '<span class="bd-spinner"></span>Transmitting…';
+      btn.disabled = true;
+
+      setTimeout(function() { form.submit(); }, 1000);
     });
   }
 })();
