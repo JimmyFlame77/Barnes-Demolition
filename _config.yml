@@ -1,7 +1,7 @@
 title: "Barnes Demolition"
 description: "Wilmington's trusted contractor for residential, commercial, and industrial demolition. Licensed & insured. Call (910) 807-5640."
-url: ""
-baseurl: "/Barnes-Demolition"
+url: "https://barnesdemolition.com"
+baseurl: ""
 permalink: none
 markdown: kramdown
 plugins:
