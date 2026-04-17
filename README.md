@@ -2,7 +2,7 @@
 
 Marketing site for **Barnes Demolition**, a demolition and site services contractor serving Wilmington and the Cape Fear region, NC. Built with [Jekyll](https://jekyllrb.com/) and hosted on GitHub Pages.
 
-**Live site:** [https://jimmyflame77.github.io/Barnes-Demolition/](https://jimmyflame77.github.io/Barnes-Demolition/)
+**Live site:** [https://barnesdemolition.com](https://barnesdemolition.com)
 **Phone:** (910) 807-5640
 
 ---
