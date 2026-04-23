@@ -55,5 +55,14 @@
   }
   </script>
 
-  {% if page.extra_head %}{{ page.extra_head }}{% endif %}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBNZSTKBYX"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){ dataLayer.push(arguments); }
+   gtag('js', new Date());
+   gtag('config', 'G-EBNZSTKBYX');
+  </script>
+
+  {% if page.extra_head %}{{ page.extra_head }}{% endif %}  
 </head>
