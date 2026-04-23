@@ -8,7 +8,6 @@ image: "/img/barnes-01.webp"
 excerpt: "A step-by-step guide to getting your property ready before the demolition crew arrives — permits, utilities, hazardous materials, and what to expect."
 description: "How to prepare your residential property for demolition in Wilmington, NC. Permits, utility disconnection, hazardous material removal, and site access tips from Barnes Demolition."
 ---
-
 Demolition day doesn't start when the excavator rolls in — it starts weeks before with proper preparation. Whether you're tearing down a deteriorated structure, clearing a lot for new construction, or removing an old mobile home, taking the right steps beforehand keeps your project on schedule, on budget, and fully compliant with local regulations.
 
 Here's what every Wilmington-area homeowner should know before the crew arrives.
@@ -29,7 +28,7 @@ Contact Duke Energy, Cape Fear Public Utility Authority, and Piedmont Natural Ga
 
 Homes built before 1980 may contain asbestos in insulation, floor tiles, siding, or roofing materials. Lead-based paint is also common in pre-1978 structures. North Carolina requires a certified asbestos inspection before demolition of most residential structures.
 
-If hazardous materials are found, they must be abated by a licensed removal contractor before demolition begins. This adds time and cost, but it's required by law and protects everyone on the site and in the surrounding neighborhood.
+If hazardous materials are found, they must be abated by a licensed removal contractor before the core [demolition process](https://barnesdemolition.com/guides/the-demolition-process-how-it-works-what-to-expect) begins. This adds time and cost, but it's required by law and protects everyone on the site and in the surrounding neighborhood.
 
 ## Clear Personal Property and Salvageables
 
