@@ -138,7 +138,7 @@ Here, we focus heavily on protecting neighboring homes, managing noise and dust,
 
 For commercial and industrial sites, the demolition process steps up in complexity:
 
-These projects often require multiple dumpsters on rotation and more intensive planning around traffic and haul routes. Our team works directly with general contractors, engineers, and inspectors to keep everything synchronized.
+[Commercial demolition projects](https://barnesdemolition.com/guides/commercial-demolition-services-a-guide-to-the-essentials.html) often require multiple dumpsters on rotation and more intensive planning around traffic and haul routes. Our team works directly with general contractors, engineers, and inspectors to keep everything synchronized.
 
 ### Interior Demolition and Selective Gut-Outs
 
