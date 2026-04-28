@@ -92,6 +92,363 @@ og_description: "Professional land clearing, structure demolition, mobile home r
 
 </div><!-- /.service-rows -->
 
+<!-- ============================================================
+     FAQ ACCORDION
+============================================================ -->
+<style>
+  /* --- FAQ Section --- */
+  .faq-section {
+    background: var(--charcoal);
+    padding: 80px 0 88px;
+    border-top: 1px solid #2e2f28;
+  }
+
+  .faq-header {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  .faq-header .section-label {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .faq-header h2 {
+    font-family: var(--font-head);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    color: var(--white);
+    max-width: 760px;
+    margin: 0 auto 14px;
+  }
+
+  .faq-header h2 .faq-accent {
+    color: var(--gold);
+  }
+
+  .faq-header-bar {
+    display: block;
+    width: 56px;
+    height: 4px;
+    background: var(--gold);
+    margin: 0 auto;
+  }
+
+  /* --- FAQ List --- */
+  .faq-list {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* --- Individual Item --- */
+  .faq-item {
+    border-bottom: 1px solid #2e2f28;
+    list-style: none;
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid #2e2f28;
+  }
+
+  /* --- Summary / Trigger --- */
+  .faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 4px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Remove default marker in all browsers */
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::marker { display: none; }
+
+  .faq-q {
+    font-family: var(--font-head);
+    font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    line-height: 1.3;
+    color: var(--white);
+    transition: color 0.22s ease;
+    flex: 1;
+  }
+
+  .faq-item summary:hover .faq-q,
+  .faq-item[open] summary .faq-q {
+    color: var(--gold);
+  }
+
+  /* Plus/minus icon */
+  .faq-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid rgba(216,165,57,0.35);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(216,165,57,0.06);
+    transition: background 0.22s ease, border-color 0.22s ease;
+    position: relative;
+  }
+
+  .faq-item summary:hover .faq-icon,
+  .faq-item[open] summary .faq-icon {
+    background: rgba(216,165,57,0.14);
+    border-color: var(--gold);
+  }
+
+  /* Horizontal bar (always visible) */
+  .faq-icon::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 1px;
+    transition: opacity 0.2s ease;
+  }
+
+  /* Vertical bar (hidden when open) */
+  .faq-icon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background: var(--gold);
+    border-radius: 1px;
+    transition: transform 0.3s cubic-bezier(0.77,0,0.18,1), opacity 0.22s ease;
+  }
+
+  .faq-item[open] .faq-icon::after {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* --- Answer Body --- */
+  .faq-body {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.38s cubic-bezier(0.77,0,0.18,1),
+                opacity 0.28s ease,
+                padding 0.32s ease;
+    padding-bottom: 0;
+  }
+
+  .faq-body.is-open {
+    opacity: 1;
+    padding-bottom: 24px;
+  }
+
+  .faq-body p {
+    font-size: 0.95rem;
+    color: #bbbcb0;
+    line-height: 1.82;
+    max-width: 100%;
+  }
+
+  .faq-body p + p {
+    margin-top: 12px;
+  }
+
+  /* Links inside answers */
+  .faq-body a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-decoration-color: rgba(216,165,57,0.4);
+    text-underline-offset: 3px;
+    font-weight: 600;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  }
+
+  .faq-body a:hover {
+    color: var(--gold-lt);
+    text-decoration-color: var(--gold-lt);
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 680px) {
+    .faq-section {
+      padding: 60px 0 68px;
+    }
+    .faq-header {
+      margin-bottom: 36px;
+    }
+    .faq-item summary {
+      padding: 18px 0;
+      gap: 14px;
+    }
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .faq-section {
+      padding: 48px 0 56px;
+    }
+    .faq-q {
+      font-size: 0.88rem;
+    }
+  }
+</style>
+
+<section class="faq-section">
+  <div class="container">
+
+    <div class="faq-header">
+      <span class="section-label">Common Questions</span>
+      <h2>Demolition Questions? We've Got <span class="faq-accent">Answers That'll Break 'Em Down</span></h2>
+      <span class="faq-header-bar"></span>
+    </div>
+
+    <ul class="faq-list" role="list">
+
+      <li class="faq-item">
+        <details open>
+          <summary>
+            <span class="faq-q">What demolition services does Barnes Demolition offer in Wilmington, NC and nearby areas?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>We handle full and partial <a href="https://barnesdemolition.com/guides/residential-demolition-services-near-me-call-barnes-today.html">demolition for residential</a>, commercial, and industrial structures throughout Wilmington, North Carolina and the surrounding Cape Fear region, including complete teardowns, selective interior demo, and structural removals. Our crew also takes care of debris hauling and site cleanup so your property is ready for the next phase, whether you are rebuilding, redeveloping, or just clearing land.</p>
+            <p>From homes and garages to larger facilities, we bring the equipment, experience, and permitting know-how to keep your project safe, <a href="https://barnesdemolition.com/compliance/construction-site-compliance-what-you-need-to-know.html">compliant</a>, and on schedule.</p>
+          </div>
+        </details>
+      </li>
+
+      <li class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q">Do you serve areas outside Wilmington, North Carolina?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>Yes — while we are based in Wilmington, NC, we regularly serve property owners and contractors across the greater Cape Fear region and surrounding communities. If you are in a nearby town or rural area and need demolition or site services, we can review your address, confirm travel availability, and provide a clear estimate up front.</p>
+            <p>Our goal is to be the go-to demolition team for Wilmington and all nearby areas that need fast, professional teardown and cleanup.</p>
+          </div>
+        </details>
+      </li>
+
+      <li class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q">How does the demolition process work from start to finish?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>We start with a site visit or detailed project review to understand your structure, access, and timeline, then provide a written estimate so you <a href="https://barnesdemolition.com/guides/the-demolition-process-how-it-works-what-to-expect.html">know exactly what to expect</a>. Once approved, we handle the heavy lifting: coordinating equipment, managing safety on site, performing the demolition itself, and loading out debris for proper disposal or recycling.</p>
+            <p>When we are done, we leave your property clean, graded as needed, and ready for your builder, contractor, or next project step.</p>
+          </div>
+        </details>
+      </li>
+
+      <li class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q">Are you licensed and insured to perform demolition in Wilmington, NC?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>You bet — Barnes Demolition is fully licensed, bonded, and insured to perform demolition and related site services in North Carolina, including within the City of Wilmington and nearby jurisdictions. That means we meet state and local requirements, carry the proper coverage, and operate with safety protocols that protect you, your neighbors, and our crew on every job.</p>
+            <p>When you hire us, you are working with a professional demolition contractor — not a fly-by-night outfit — and that matters when heavy equipment and structures are involved.</p>
+          </div>
+        </details>
+      </li>
+
+      <li class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q">Can you help with debris removal and site prep after demolition?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>Absolutely — our services include complete haul-away and disposal of demolition debris, saving you from dealing with dumpsters, trucking, or landfill logistics around Wilmington and the surrounding areas. We can also provide land clearing, grading, and basic site prep so your lot is clean, level, and ready for whatever comes next, from a new build to a parking area or green space.</p>
+            <p>If you need additional site services tied to your demolition project, let us know during the estimate so we can build everything into one streamlined plan.</p>
+          </div>
+        </details>
+      </li>
+
+      <li class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q">How do I get an estimate for demolition in Wilmington or nearby?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>You can contact us directly through our website or by phone to schedule a free, no-obligation estimate for your demolition project in Wilmington, North Carolina or any surrounding community. We will ask a few quick questions, review photos or conduct a site visit, and then provide clear pricing and a realistic timeline based on the size and complexity of your job.</p>
+            <p>Once you are <a href="https://barnesdemolition.com/guides/preparing-your-property-for-residential-demolition.html">ready to move forward</a>, we lock in your start date and bring our heavy-hitting team and equipment to get the job done right the first time.</p>
+          </div>
+        </details>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<script>
+(function () {
+  // Smooth animated accordion for FAQ — works alongside native <details> open/closed state
+  var items = document.querySelectorAll('.faq-item details');
+
+  function openItem(details) {
+    var body = details.querySelector('.faq-body');
+    if (!body) return;
+    details.open = true;
+    body.style.maxHeight = body.scrollHeight + 'px';
+    body.classList.add('is-open');
+  }
+
+  function closeItem(details) {
+    var body = details.querySelector('.faq-body');
+    if (!body) return;
+    body.style.maxHeight = '0';
+    body.classList.remove('is-open');
+    setTimeout(function () {
+      if (!details.open) return;
+      details.open = false;
+    }, 380);
+  }
+
+  // Initialize open state for any item with [open] attribute on page load
+  items.forEach(function (details) {
+    var body = details.querySelector('.faq-body');
+    if (!body) return;
+    if (details.open) {
+      body.style.maxHeight = body.scrollHeight + 'px';
+      body.classList.add('is-open');
+    }
+
+    details.addEventListener('click', function (e) {
+      // Only intercept summary clicks
+      if (!e.target.closest('summary')) return;
+      e.preventDefault();
+
+      if (details.open) {
+        closeItem(details);
+      } else {
+        openItem(details);
+      }
+    });
+  });
+})();
+</script>
+
 <!-- CTA BAND -->
 <section class="cta-band">
   <div class="container">
