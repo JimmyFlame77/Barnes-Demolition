@@ -320,7 +320,7 @@ og_description: "Professional land clearing, structure demolition, mobile home r
     <ul class="faq-list" role="list">
 
       <li class="faq-item">
-        <details open>
+        <details>
           <summary>
             <span class="faq-q">What demolition services does Barnes Demolition offer in Wilmington, NC and nearby areas?</span>
             <span class="faq-icon" aria-hidden="true"></span>
@@ -442,6 +442,12 @@ og_description: "Professional land clearing, structure demolition, mobile home r
       if (details.open) {
         closeItem(details);
       } else {
+        // Close any other open items before opening this one
+        items.forEach(function (other) {
+          if (other !== details && other.open) {
+            closeItem(other);
+          }
+        });
         openItem(details);
       }
     });
