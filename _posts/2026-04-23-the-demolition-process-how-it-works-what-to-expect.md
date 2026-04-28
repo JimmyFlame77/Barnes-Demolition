@@ -24,8 +24,6 @@ Every successful demolition process begins with boots on the ground and eyes on 
 
 During your initial site visit, our team:
 
-  
-
 This is where we start turning a building into a plan. We look at how close other structures are, whether there are tight alleys for equipment, and the best paths for trucks and dumpsters to move in and out without disrupting traffic or damaging landscaping.
 
 The site visit is also where we identify potential challenges early: old foundations, buried concrete, unstable walls, or limited street access. These details shape the demolition timeline, equipment selection, and debris strategy long before the first machine fires up.
@@ -38,23 +36,17 @@ Once we understand your site, we move into the planning phase where safety, comp
 
 In Wilmington and surrounding municipalities, demolition usually requires permits and coordination with local authorities. As a licensed and insured contractor, Barnes Demolition handles:
 
-  
-
 You don’t have to wade through forms or stand in line at the office; we manage it, keep you informed, and make sure the demolition process stays on the right side of the regulations.
 
 ### Disconnecting Utilities and Ensuring Safety
 
 Before a single wall comes down, utilities must be safely disconnected. This includes:
 
-  
-
 We coordinate directly with utility companies so that there’s zero guesswork and zero shortcuts. This step is non-negotiable—proper utility disconnects are the foundation of a safe demolition process for both our crew and your neighbors.
 
 ### Detailed Demolition Plan
 
 Next, we build a structured plan that outlines:
-
-  
 
 For larger commercial or industrial projects, we often phase the work to minimize downtime for neighboring operations and to keep debris moving smoothly from structure to dumpster to disposal facility.
 
@@ -66,8 +58,6 @@ With plans in place, it’s time for the physical teardown—the part most peopl
 
 We bring in the right combination of equipment based on the project:
 
-  
-
 Our crew arrives trained and fully briefed on the site plan, safety protocols, and communication procedures for working in and around Wilmington neighborhoods and commercial areas.
 
 ### Controlled Structural Teardown
@@ -76,15 +66,11 @@ Demolition is not chaos. It’s a controlled sequence designed to keep the struc
 
 Typical steps in the structural demolition process include:
 
-  
-
 We constantly monitor dust, vibration, and debris paths, especially in dense areas or near busy streets. Our goal is to tear it down without disturbing more than we have to—and to keep the site safe for everyone at all times.
 
 ### Concrete and Foundation Removal
 
 Once the main structure is down, we turn to concrete and foundation removal. Using hydraulic breakers and excavators, we:
-
-  
 
 This is where the site starts shifting from “demo site” to “blank canvas.” When you walk it at this stage, you can start to see where the future build or new use will take shape.
 
@@ -98,8 +84,6 @@ Every piece of material that comes down has to go somewhere. Without a smart deb
 
 Roll-off dumpsters provide:
 
-  
-
 By integrating dumpsters into the demolition process from day one, we turn debris removal into a smooth, continuous flow instead of a last-minute scramble.
 
 ### Partnering with Local Dumpster Experts
@@ -108,15 +92,11 @@ For projects in Wilmington, NC and surrounding areas, we work with local provide
 
 Their service offers:
 
-  
-
 Because their team is local and focused on reliable service, we can schedule swaps and pickups so dumpsters are ready when we are, preventing downtime and overflow.
 
 ### Streamlining Cleanup and Haul-Off
 
 A well-planned demolition process uses dumpsters as moving targets in all the right ways:
-
-  
 
 This approach keeps the site cleaner, helps manage dust and trip hazards, and dramatically speeds up the final cleanup. Instead of spending extra days chasing stray piles of debris, we’re able to complete the last haul-off efficiently and hand you a site that’s truly ready for its next purpose.
 
@@ -125,8 +105,6 @@ This approach keeps the site cleaner, helps manage dust and trip hazards, and dr
 In the Wilmington area, responsible demolition isn’t just a talking point—it’s part of doing the job right.
 
 We focus on:
-
-  
 
 From salvaging usable materials when appropriate to routing loads away from landfills where possible, our demolition process respects both your project and the environment we all share across the Cape Fear region.
 
@@ -138,15 +116,11 @@ Once the structure is gone and the debris is hauled away, we move into site clea
 
 Our team tackles:
 
-  
-
 By the time we’re done, you’re not walking a demolition site; you’re walking a prepared property.
 
 ### Grading the Site
 
 Grading is where we shape your land to support future use. That can mean:
-
-  
 
 When we leave, the transformation is clear: what was once a tired or unsafe structure has become a clean, development-ready site.
 
@@ -158,15 +132,11 @@ Not every project is the same, and the demolition process shifts depending on wh
 
 [Residential projects](https://barnesdemolition.com/guides/preparing-your-property-for-residential-demolition.html) in Wilmington’s neighborhoods often involve:
 
-  
-
 Here, we focus heavily on protecting neighboring homes, managing noise and dust, and keeping streets accessible for residents. Dumpsters are typically sized and positioned to minimize impact on driveways and shared spaces.
 
 ### Commercial and Industrial Demolition
 
 For commercial and industrial sites, the demolition process steps up in complexity:
-
-  
 
 These projects often require multiple dumpsters on rotation and more intensive planning around traffic and haul routes. Our team works directly with general contractors, engineers, and inspectors to keep everything synchronized.
 
@@ -176,8 +146,6 @@ Sometimes you don’t need a building gone—you just need it transformed from t
 
 Interior demolition and selective gut-outs focus on:
 
-  
-
 Here, the demolition process is more surgical. We may use smaller equipment, more manual labor, and tighter debris management with dumpsters sized for renovation debris rather than full structural teardown.
 
 ## Safety: The Non-Negotiable Core of Every Demolition
@@ -186,8 +154,6 @@ Demolition is powerful work, and safety is the core of every decision we make.
 
 Our approach includes:
 
-  
-
 From utility verification to debris handling, we build safety into the plan so you can move forward with confidence, knowing the job is being handled the right way.
 
 ## Timeline: How Long the Demolition Process Takes
@@ -195,8 +161,6 @@ From utility verification to debris handling, we build safety into the plan so y
 No two projects are identical, but most demolition timelines follow a similar rhythm once permits and utilities are handled.
 
 A typical structure demolition might involve:
-
-  
 
 Working with reliable dumpster partners and efficient haul-off routes helps keep these timelines tight by preventing debris from bottlenecking the process.
 
@@ -222,7 +186,7 @@ Larger commercial or industrial demolitions can extend into multi-week or phased
 
 ### What types of demolition services does Barnes Demolition provide?
 
-We provide a [full spectrum of services in and around Wilmington](https://barnesdemolition.com/guides/residential-demolition-services-near-me-call-barnes-today.html), including residential demolition, commercial demolition, interior demolition, industrial dismantling, concrete and foundation removal, and site clearing and grading. From small accessory buildings to large industrial facilities, our demolition process is flexible enough to handle straightforward teardowns and complex, multi-phase projects alike.
+We provide a full spectrum of services in and around Wilmington, including [residential demolition](https://barnesdemolition.com/guides/residential-demolition-services-near-me-call-barnes-today), commercial demolition, interior demolition, industrial dismantling, concrete and foundation removal, and site clearing and grading. From small accessory buildings to large industrial facilities, our demolition process is flexible enough to handle straightforward teardowns and complex, multi-phase projects alike.
 
 ### How does Barnes Demolition handle safety and environmental responsibility?
 
